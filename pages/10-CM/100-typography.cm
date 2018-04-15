@@ -1,0 +1,27 @@
+@toc cm_typography;; Typography
+= Typography
+
+CM pages are written in UTF8 Unicode encoding. That allows the use of accented letters and many special characters. Several selected special characters that are frequently used may be also entered as the following plain sequences:
+
+~~~
+- {->} right single arrow
+- {<-} left single arrow
+- {=>} right double arrow
+- {<=} left double arrow
+- {>} right triangle
+- {<} left triangle
+- {--} n-dash
+- {---} m-dash
+~~~
+makes {>}
+---.box
+- {->} right single arrow
+- {<-} left single arrow
+- {=>} right double arrow
+- {<=} left double arrow
+- {>} right triangle
+- {<} left triangle
+- {--} n-dash
+- {---} m-dash
+---
+

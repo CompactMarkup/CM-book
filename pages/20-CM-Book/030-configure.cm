@@ -1,0 +1,26 @@
+@toc cmb_configure;; Configure
+= Configure the book
+
+A small set of configuration parameters is in the ~book.php~ file. Either edit the existing ~book.php~ file, or use this template:
+
+~~~.php
+<?php
+$book = [
+  'title'       => '...',
+  'banner'      => '...',
+
+  'description' => '...',
+  'keywords'    => '...',
+  'author'      => '...',
+
+  'pages'       => 'pages/',
+];
+~~~
+
+Replace the placeholders (~...~) with:
+- title: the book title (the value of the HTML ~<title>~ tag)
+- banner: text that is shown on the top of the site
+- description, keywords, author: values of the respective HTML ~<meta>~ tags
+- pages: the name of the folder that contains the book page hierarchy (must end with ~\/~)
+
+# eof

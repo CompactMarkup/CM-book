@@ -1,0 +1,25 @@
+@toc cm;; Compact Markup
+= $CM
+
+$CM (*CM*) is a modern document {wp: markup language}, intended for creating book-like web sites.
+
+$CM is:
+- *{wp: lightweight}*: it uses minimal amount of resources.
+- *simple*: only a small set of most common text-formatting and similiar markup features is built into its syntax; that makes its parsing straightforward and its interpreting *unambiguous*.
+- *configurable*: some aspects of CM syntax are configurable through {:.lc cm_pragmas}.
+- *extensible*: text-processing features are realized through so-called {:.lc cm_hooks}. CM has a small set of ready-to-use hooks; by adding custom hooks, CM can be extended by new features.
+
+The CM text is easy to read and edit in its source plain text form.
+
+== Parsing: first position
+
+CM is parsed line-by-line. A number of features are determined by the character that appears at the *very beginning* of a line (without any preceding blank space). This is called the /first position/.
+
+
+
+
+
+
+
+
+

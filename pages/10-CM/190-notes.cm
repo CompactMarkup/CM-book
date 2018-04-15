@@ -1,0 +1,36 @@
+@toc cm_notes;; Notes
+= Notes
+
+CM text may contain three kinds of notes:
+- footnotes
+- editorial notes
+- 'to-do' placeholders
+
+Footnotes are as usual:
+~~~
+This text has an attached footnote.{fn: This is a footnote.}
+~~~
+makes {>}
+---.box
+This text has an attached footnote.{fn: This is a footnote.}
+---
+
+Editorial notes are visible only if the book is in the debug mode (the port number >= 8000):
+~~~
+This is {ed:mizzpeled|korrekt this}.
+~~~
+makes {>}
+---.box
+This is {ed:mizzpeled|korrekt this}.
+---
+
+'To do' placeholders are also visible only in the debug mode:
+~~~
+This feature{todo: does not yet exist}.
+~~~
+makes {>}
+---.box
+This feature{todo: does not yet exist}.
+---
+
+# eof

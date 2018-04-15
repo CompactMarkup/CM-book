@@ -1,0 +1,26 @@
+@toc cm_class;; Class attributes
+= Class attributes
+
+In certain situations, ~.~ followed by a name is a "class attribute" that modifes the style of the element to which it is applied (the name relates to a CSS class). One or more class attributes can be used.
+
+~~~
+-.left left floating list
+- item 1
+- item 2
+
+-.right right floating list
+- item a
+- item b
+~~~
+makes {>}
+---.box
+-.left left floating list
+- item 1
+- item 2
+
+-.right right floating list
+- item a
+- item b
+---
+
+# eof

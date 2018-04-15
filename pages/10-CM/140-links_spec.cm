@@ -1,0 +1,36 @@
+@toc cm_links_spec;; Special links
+= Special links
+Special links are shortcuts for links that lead to frequently used websites.
+
+$CM supports these special links:
+
+== Wikipedia
+Love it or hate it, Wikipedia is here and is often used. To make a simplified, special link to it, use ~wp:~. Spaces in link text are automatically replaced by ~_~, and the text becomes a part of the complete URL:
+
+~~~
+An {wp: audio engineer} is a person who
+{wp: records sound|Sound recording and reproduction}.
+He makes an {wp:analogue|analog recording} or {wp:digital recording}.
+~~~
+makes {>}
+---.box
+An {wp: audio engineer} is a person who
+{wp: records sound|Sound recording and reproduction}.
+He makes an {wp:analogue|analog recording} or {wp:digital recording}.
+---
+
+== GitHub
+
+~~~
+An interactive text book for audio engineers,
+written with {gh:CM|CompactMarkup} and called {gh:mutebook}
+is on GitHub ({gh:here|mutebook}).
+~~~
+makes {>}
+---.box
+An interactive text book for audio engineers,
+written with {gh:CM|CompactMarkup} and called {gh:mutebook}
+is on GitHub ({gh:here|mutebook}).
+---
+
+# eof

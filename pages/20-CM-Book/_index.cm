@@ -1,0 +1,11 @@
+@toc cmb;; CM-Book
+= How to write a CM book
+
+This section explains how to create a CM book and its content, following these steps:
+* Install the {:required software|cmb_software}.
+* Make a {:local copy of a book|cmb_local}.
+* {:cmb_configure} the book.
+* Create a {:hierarchy of folders and pages|cmb_pages} and the corresponding table of content.
+* Write and format text using various {:cm} features.
+
+# eof

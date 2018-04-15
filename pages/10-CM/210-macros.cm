@@ -1,0 +1,59 @@
+@toc cm_macros;; Macros
+= Macros {#macros}
+
+Macros allow a simple short identifier to represent a longer, arbitrary sequence of characters.
+
+A macro is defined by {~@def identifier text...}. The identifier is a sequence of letters and numbers. The text can be anything, including spaces and other special characters. The macro text is trimmed (the beginning and ending spaces are removed), but spaces inside the text are retained.
+
+Define macros:
+~~~
+@def dB dB{,SPL}
+@def SG {$$\mathsf{S_{G}}$$}
+~~~
+@def dB dB{,SPL}
+@def SG {$$\mathsf{S_{G}}$$}
+
+To use a macro, put ~\$~ before the macro identifier:
+~~~
+$dB $SG
+~~~
+gives:
+---.box
+$dB $SG
+---
+
+To prevent macro expansion, escape the ~\$~:
+~~~
+\$SG
+~~~
+gives:
+---.box
+\$SG
+---
+
+In the debug mode, bad (used, but not defined) macros are reported:
+~~~
+$BADMacro
+~~~
+gives:
+---.box
+$BADMacro
+---
+
+With a {:pragma|cm_pragmas} it is possible to switch to another character for macro exansion, instead of {~$}, for example to {~%}:
+
+~~~
+@chr macro %
+$dB $SG $BAD \$NotAMacro \n
+%dB %SG %BAD \%NotAMacro
+~~~
+gives:
+---.box
+@push
+@chr macro %
+$dB $SG $BAD \$NotAMacro \n
+%dB %SG %BAD \%NotAMacro
+@pop
+---
+
+# eof

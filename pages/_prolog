@@ -1,0 +1,10 @@
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo "
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub

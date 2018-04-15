@@ -1,0 +1,32 @@
+@toc cm_comments;; Comments      
+= Comments
+
+A line that starts with ~#~ in the first position is a comment and will be ignored.
+
+The CM source text:
+~~~
+A normal line
+# This is a comment
+
+ # This is not a comment
+ 
+This is also # not a comment
+~~~
+will be rendered as {>}
+---.box
+A normal line
+# This is a comment
+
+ # This is not a comment
+ 
+This is also # not a comment
+---
+
+If ~#~ must be in the first position, {:escape|cm_escape} it:
+~~~
+\# Hash sign in the first position
+~~~
+makes {>}
+---.box
+\# Hash sign in the first position
+---

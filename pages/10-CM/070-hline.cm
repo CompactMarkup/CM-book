@@ -1,0 +1,16 @@
+@toc cm_hline;; Horizontal line
+= Horizontal line
+Four or more ~-~ in the first position insert a horizontal line:
+~~~
+text...
+------- 
+text...
+~~~
+makes {>}
+---.box
+text...
+-------
+text...
+---
+
+# eof

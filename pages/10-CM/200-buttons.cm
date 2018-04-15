@@ -1,0 +1,19 @@
+@toc cm_buttons;; In-text buttons
+= In-text buttons
+
+They look as if they were buttons, but are no buttons.
+~~~
+{btn: button}
+{btn:.r red button}
+{btn:.g green button}
+{btn:.b blue button}
+~~~
+makes {>}
+---.box
+{btn: button}
+{btn:.r red button}
+{btn:.g green button}
+{btn:.b blue button}
+---
+
+# eof

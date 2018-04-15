@@ -1,0 +1,42 @@
+@toc cm_headers;; Headers
+= Headers
+Headers start with one or more (up to six) ~=~ in the first position.
+~~~
+= First-level header
+== Second
+=== Third
+==== Fourth 
+===== Fifth
+====== Sixth 
+~~~
+makes {>}
+---.box
+= First-level header
+== Second
+=== Third
+==== Fourth 
+===== Fifth
+====== Sixth 
+---
+
+The first-level header is usually used only once on a page, at the very beginning. The second-level headers are separated from the content before them by a horizontal line. Second-level headers also make up the local page navigation menu.
+
+~~~
+== Section 1
+Goes into the local menu.
+
+== Section 2
+Also goes into the local menu.
+
+== Section 3
+This one, too.
+~~~
+makes {>}
+== Section 1
+Goes into the local menu.
+
+== Section 2
+Also goes into the local menu.
+
+== Section 3
+This one, too.

@@ -1,0 +1,32 @@
+@toc cm_paragraphs;; Paragraphs
+= Paragraphs
+
+Paragraph detection is automatic. Paragraphs are blocks of text separated by blank lines, headers, code blocks, sections, or horizontal lines. In addition, lines that begin with ~.~ in the first position also mark a beginning of a new paragraph.
+
+~~~
+Paragraph,
+still the same paragraph.
+
+A new paragraph.
+On two source lines.
+.A paragraph without a blank line before it.
+.Another
+\. This is not.
+-----
+One after a horizontal line.
+~~~
+makes {>}
+---.box
+Paragraph,
+still the same paragraph.
+
+A new paragraph.
+On two source lines.
+.A paragraph without a blank line before it.
+.Another
+\. This is not.
+-----
+One after a horizontal line.
+---
+
+# eof

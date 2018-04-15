@@ -1,0 +1,28 @@
+@toc cmb_local;; Local copy
+= Work with a local copy of a CM book
+
+To develop or change a CM book content, it is best to work with a local copy of an existing book. Either simply download and unpack the latest release (source archive) of {gh: this|CompactMarkup/CM-Book/releases} (or another) book, or create a local clone of a repository (or of a repository fork) by the usual means, /tohether with/ the ~CM~ submodule:
+~~~
+git clone --recursive ...
+~~~
+
+== Running a book locally
+
+A CM book is web-based book and must be served by a web server (unless the static version has been created). PHP has a built-in development server that can be used to that purpose. In the terminal navigate to the directory with the book and run:
+~~~
+php -S localhost:8053
+~~~
+
+The port (~8053~, you may choose another number, if you wish) must be available; without superuser privileges must the port number be (usually) 1024 or more.
+
+==== Debug mode
+
+If the port is 8000 or higher, the book will run in a /debug mode/. In debug mode:
+- the table of contents is azutomatically updated whenever any of the ~.cm~ files changes,
+- errors in markup, undefined macros, editorial and todo notes will be prominently shown.
+
+==== Live-edit the book text
+
+Open the book content (the ~pages\/~ folder) in Brackets (/File\/Open Folder.../). Enable LiveReload (click {img:img/liveReload_Brackets.png|18}). Open the served local book web site (localhost:8001) in the web browser. Enable LiveReload (click {img:img/liveReload_browser.png}). Then, as a file is saved in Brackets, the browser will automatically refresh the page.
+
+# eof

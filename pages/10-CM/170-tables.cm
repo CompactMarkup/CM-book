@@ -1,0 +1,48 @@
+@toc cm_tables;; Tables
+= Tables
+
+The support for tables is very basic: in a fenced section ~table~, ~[~ and ~]~, resp. ~(~ and ~)~ delimit table header cells resp. data cells:
+
+~~~
+--- div.left
+With borders:
+--- table.border
+[th1][th2][th3][th4]
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+---
+---
+
+--- div.right
+Borderless:
+--- table
+[th1][th2][th3][th4]
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+---
+---
+~~~
+makes {>}
+---.box
+--- div.left
+With borders:
+--- table.border
+[th1][th2][th3][th4]
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+---
+---
+
+--- div.right
+Borderless:
+--- table
+[th1][th2][th3][th4]
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+---
+---
+---

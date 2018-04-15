@@ -1,0 +1,14 @@
+@toc cm_formulas;; Formulas
+= Formulas
+
+Mathematical formulas can be entered using the TeX syntax and are typeset by {:KaTeX|https://khan.github.io/KaTeX/function-support.html}. Surround the formulas by ~\{\$\$~ and ~\$\$\}~:
+
+~~~
+{$$ 20 \times 10^{0.0002} $$}
+~~~
+makes {>}
+---.box
+{$$ 20 \times 10^{0.0002} $$}
+---
+
+# eof

@@ -1,0 +1,14 @@
+@toc cm_hooks;; Hooks
+= Hooks
+
+Hooks in CM are bracketed sections of code that allow the CM engine "hook into" the text and do some processing. Hooks are delimited by ~\{~ and ~\}~. Hooks in CM are of three kinds:
+
+* {:Typographical hooks|cm_typography}.
+* {:Formatting hooks|cm_text}.
+* Processing hooks. Processing hooks implement {:.lc cm_links}, {:.lc cm_images}, and {:.lc cm_notes}.
+
+A processing hook has, immediately after the opening {~\{}, a specific /tag/, optionally followed by arguments ("parts") of a hook: the first one separated from the tag by a blank space; the following parts separated by {~\|}.
+
+Each book may implement its own processing hooks (in ~books.js~).
+
+# eof

@@ -1,0 +1,29 @@
+@toc cm_text;; Text formatting
+= Text formatting
+
+Portions of text may be marked for formatting by surrounding them by ~\{~ and ~\}~. The first character after the opening brace specifies the format type:
+
+~~~
+Text can be marked as {/emphasized},
+{*bolded}, {_underlined}, or {~monospaced};
+also as {'superscript} or {,subscript}.
+~~~
+makes {>}
+---.box
+Text can be marked as {/emphasized},
+{*bolded}, {_underlined}, or {~monospaced};
+also as {'superscript} or {,subscript}.
+---
+
+Formatting can be nested:
+~~~
+This text is {/emphasised and
+{_underlined{'{*super}script}}}.
+~~~
+makes {>}
+---.box
+This text is an {/emphasised and
+{_underlined{'{*super}script}}}.
+---
+
+# eof
