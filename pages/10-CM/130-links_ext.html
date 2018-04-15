@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'External links', pages: 'pages/', pagePath: '10-CM/', pageFile: '130-links_ext.html'}</script>
+<script src="../../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
+@toc cm_links_ext;; External links
+= External links
+
+External links (that lead to web resources outside of the book) work the same as internal links, except that instead of the page idengtifier they contain an URL that begins with the access protocol:
+~~~
+The URL of the companion website for the
+{:Live-Electronic Music|http://live-electronic-music.com} book
+is {:http://live-electronic-music.com}.
+~~~
+makes {&gt;}
+---.box
+The URL of the companion website for the
+{:Live-Electronic Music|http://live-electronic-music.com} book
+is {:http://live-electronic-music.com}.
+---
+
+If it is not known or not important whether the protocol is ~http~ or ~https~, simply begin the link with a ~\/\/~:
+
+~~~
+The {:GitHub|//github.com/CompactMarkup} repository of $CM code 
+is {://github.com/CompactMarkup}.
+~~~
+makes {&gt;}
+---.box
+The {:GitHub|//github.com/CompactMarkup} repository of $CM code 
+is {://github.com/CompactMarkup}.
+---
+
+Note: external links do open in a separate browser tab.
+
+# eof
+</pre>
+</body>
+</html>

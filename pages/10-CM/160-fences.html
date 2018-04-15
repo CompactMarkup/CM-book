@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'Fenced sections', pages: 'pages/', pagePath: '10-CM/', pageFile: '160-fences.html'}</script>
+<script src="../../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
+@toc cm_sections;; Fenced sections
+= Fenced sections
+
+Exactly three ~-~ in the first position indicate the beginning or ending of a /fenced/ section block. The ~---~ may be followed by a section tag and by class attributes. The choice of section tags should correspond to {:HTML block-level elements|https://www.w3schools.com/html/html_blocks.asp}. Sections may be nested.
+
+~---~ that is not followed by a section tag indicates a section ending, if inside of a section; otherwise it indicates a section beginning and the tag ~div~ is assumed (which is usually the common case).
+
+==== Boxes
+Boxes are ~div~ sections with the class attribute ~.box~.
+
+~~~
+before floating boxes
+---
+--- .box.left
+floating left
+---
+--- .box.right
+floating right
+---
+---
+~~~
+is the same as:
+~~~
+before floating boxes
+--- div
+--- div.box.left
+floating left
+---
+--- div.box.right
+floating right
+---
+---
+~~~
+and makes {&gt;}
+---.box
+before floating boxes
+--- div
+--- .box.left
+floating left
+---
+--- .box.right
+floating right
+---
+---
+---
+
+== Code blocks
+
+Exactly three {~~} in the first position on a line delimit a code block (pre-formatted text). The opening {~~~~} may be followed by class attributes.
+
+Code blocks may *not* be nested. The content of a code block is highlighted as a specific programming language (given by the class attribute) by {:https://highlightjs.org/}.
+
+The text in a code block is interpreted literally and no markup processing takes place, with the exception of {~~~~} that end the code block.
+
+@push
+@chr pre &acute;
+&acute;&acute;&acute;
+~~~
+Plain preformatted text.
+~~~
+
+~~~.php
+#!/usr/bin/php
+&lt;?php
+
+function msg ($msg) {
+  error_log($msg);
+}
+~~~
+
+~~~.c.right
+int main() {
+  return 0;
+} 
+~~~
+&acute;&acute;&acute;
+@pop
+makes {&gt;}
+~~~
+Plain preformatted text.
+~~~
+
+~~~.php
+#!/usr/bin/php
+&lt;?php
+
+function msg ($msg) {
+  error_log($msg);
+}
+~~~
+
+~~~.c.right
+int main() {
+  return 0;
+} 
+~~~
+
+# eof
+</pre>
+</body>
+</html>

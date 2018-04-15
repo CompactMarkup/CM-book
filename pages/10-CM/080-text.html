@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'Text formatting', pages: 'pages/', pagePath: '10-CM/', pageFile: '080-text.html'}</script>
+<script src="../../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
+@toc cm_text;; Text formatting
+= Text formatting
+
+Portions of text may be marked for formatting by surrounding them by ~\{~ and ~\}~. The first character after the opening brace specifies the format type:
+
+~~~
+Text can be marked as {/emphasized},
+{*bolded}, {_underlined}, or {~monospaced};
+also as {'superscript} or {,subscript}.
+~~~
+makes {&gt;}
+---.box
+Text can be marked as {/emphasized},
+{*bolded}, {_underlined}, or {~monospaced};
+also as {'superscript} or {,subscript}.
+---
+
+Formatting can be nested:
+~~~
+This text is {/emphasised and
+{_underlined{'{*super}script}}}.
+~~~
+makes {&gt;}
+---.box
+This text is an {/emphasised and
+{_underlined{'{*super}script}}}.
+---
+
+# eof
+</pre>
+</body>
+</html>
