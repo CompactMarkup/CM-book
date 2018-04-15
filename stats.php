@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER['SERVER_PORT'] < 80000 /* not debug */) {
+if ($_SERVER['SERVER_PORT'] < 8000 /* not debug */) {
   // statcounter
 
   $book['page_end'] = <<<HEREDOC
