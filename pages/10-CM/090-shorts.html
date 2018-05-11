@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'Formatting shortcuts', pages: 'pages/', pagePath: '10-CM/', pageFile: '090-shorts.html'}</script>
+<script src="../../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
+@toc cm_shorts;; Formatting shortcuts
+= Shortcuts
+
+Since marking text as emphasised, bolded, etc. may be done frequently, it is possible to use formatting shortcuts: simply surrounding the text by a pair of ~\/~, ~\*~, etc. In that case, however, the characters used as shortcuts must be escaped by ~\\~ if they are used literally. Whether the shortcuts are useful, depends on the type of text and style of writing.
+
+In order to use a particular shortcut, it must be first enabled, by {:.lc cm_pragmas}:
+
+@push
+
+~~~
+@chr em /
+@chr b *
+@chr u _
+@chr code ~
+
+Text can be /emphasized/,
+*bolded*, _underlined_, or ~monospaced~.
+~~~
+makes {&gt;}
+---.box
+@chr em /
+@chr b *
+@chr u _
+@chr code ~
+
+Text can be /emphasized/,
+*bolded*, _underlined_, or ~monospaced~.
+---
+
+The shortcut characters can be chosen arbitrarily:
+~~~
+@chr em +
+@chr b :
+@chr u -
+@chr code &acute;
+
+Text can be +emphasized+,
+:bolded:, -underlined-, or &acute;monospaced&acute;.
+~~~
+makes {&gt;}
+---.box
+@chr em +
+@chr b :
+@chr u -
+@chr code &acute;
+
+Text can be +emphasized+,
+:bolded:, -underlined-, or &acute;monospaced&acute;.
+---
+
+This can be done also for subscript and superscript:
+~~~
+@chr sup '
+@chr sub &quot;
+
+This is 'superscript' and &quot;subscript&quot;.
+~~~
+makes {&gt;}
+---.box
+@chr sup '
+@chr sub &quot;
+
+This is 'superscript' and &quot;subscript&quot;.
+---
+
+Shortcut formatting can be also nested:
+~~~
+This text is an +emphasised and
+-underlined':super:script'-+.
+~~~
+makes {&gt;}
+---.box
+This text is an +emphasised and
+-underlined':super:script'-+.
+---
+
+For literal use of the characters that were selected for shortcut formatting, either escape them or switch the shortcut off:
+~~~
+- Still +emphasised+.
+- Escaped literal plus\+.
+@chr em
+- Anther literal plus+.
+~~~
+makes {&gt;}
+---.box
+- Still +emphasised+.
+- Escaped literal plus\+.
+@chr em
+- Another literal plus+.
+---
+@pop 
+
+Hint: put the pragmas that you wish to apply to a number of pages in a {:.lc cmb_prolog} file.
+
+# eof
+
+</pre>
+</body>
+</html>

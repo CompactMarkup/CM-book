@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'Formulas', pages: 'pages/', pagePath: '10-CM/', pageFile: '180-formulas.html'}</script>
+<script src="../../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
+@toc cm_formulas;; Formulas
+= Formulas
+
+Mathematical formulas can be entered using the TeX syntax and are typeset by {:KaTeX|https://khan.github.io/KaTeX/function-support.html}. Surround the formulas by ~\{\$\$~ and ~\$\$\}~:
+
+~~~
+{$$ 20 \times 10^{0.0002} $$}
+~~~
+makes {&gt;}
+---.box
+{$$ 20 \times 10^{0.0002} $$}
+---
+
+# eof
+</pre>
+</body>
+</html>

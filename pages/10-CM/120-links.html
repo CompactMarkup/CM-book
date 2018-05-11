@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'Links and anchors', pages: 'pages/', pagePath: '10-CM/', pageFile: '120-links.html'}</script>
+<script src="../../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
+@toc cm_links;; Links and anchors
+= Links and anchors
+
+Text may (and should) contain hyperlinks. Hyperlinks that lead to another page (or to a specific location on a page) in the same $CMB are /internal/ links. Hyperlinks that lead to a web page outside of the $CMB are /external/ links.
+
+An internal link refers to the target page by the page identifier that has been defined in the {:cmb_toc} entry of the target page. The link is surrounded by ~\{:~ and ~\}~. The link contains either only the target page identifier {---} in which case the text that is displayed is taken from the TOC entry {---} or a text followed by ~|~ and then the page identifier:
+
+~~~
+The {:cmb_toc} page describes how to {:create the table of content|cmb_toc}.
+~~~
+makes {&gt;}
+---.box
+The {:cmb_toc} page describes how to {:create the table of content|cmb_toc}.
+---
+
+An anchor marks a specific location on a page:
+~~~
+{#location} Here is an anchor (it is invisible).
+~~~
+makes {&gt;}
+---.box
+{#location} Here is an anchor (it is invisible).
+---
+
+And then a link can lead to the location marked by the anchor:
+~~~
+These are all links to the same anchor:
+- to the marked {:#location} on this page
+- to the {:same place|#location} on this page
+- to the marked {:place|cm_links#location}
+  on the specified page
+~~~
+makes {&gt;}
+---.box
+These are all links to the same anchor:
+- to the marked {:#location} on this page
+- to the {:same place|#location} on this page
+- to the marked {:place|cm_links#location}
+  on the specified page
+---
+
+# eof
+</pre>
+</body>
+</html>

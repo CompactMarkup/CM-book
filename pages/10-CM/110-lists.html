@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'Lists', pages: 'pages/', pagePath: '10-CM/', pageFile: '110-lists.html'}</script>
+<script src="../../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
+@toc cm_lists;; Lists
+= Lists
+
+~-~ resp. ~\*~ in the first position, followed by a blank space and then text, turns that line into an item of an unnumbered resp. numbered list. The text of a list item continues on the following line(s) (without the need to use a trailing ~\/~), as long as those lines begin with blank space.
+
+Lists cannot be nested.
+~~~
+- one
+- and two
+* one
+* two
+* three, \
+  the '\\' above was not needed
+  to continue
+~~~
+makes {&gt;}
+---.box
+- one
+- and two
+* one
+* two
+* three, \
+  the '\\' above was not needed
+  to continue
+---
+
+# eof
+</pre>
+</body>
+</html>

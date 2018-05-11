@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'In-text buttons', pages: 'pages/', pagePath: '10-CM/', pageFile: '200-buttons.html'}</script>
+<script src="../../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
+@toc cm_buttons;; In-text buttons
+= In-text buttons
+
+They look as if they were buttons, but are no buttons.
+~~~
+{btn: button}
+{btn:.r red button}
+{btn:.g green button}
+{btn:.b blue button}
+~~~
+makes {&gt;}
+---.box
+{btn: button}
+{btn:.r red button}
+{btn:.g green button}
+{btn:.b blue button}
+---
+
+# eof
+</pre>
+</body>
+</html>

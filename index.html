@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<title>CM-Book</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+
+<meta name="description" content="CM (Compact Markup): a lightweight, simple and unambiguous, configurable and extensible document markup language. CMB (CM-Book): a navigable brower-based book, made using CM.">
+<meta name="keywords" content="Compact Markup, CM-Book, document markup, online book.">
+<meta name="author" content="Jan Burle">
+<meta name="generator" content="https://github.com/CompactMarkup/CM (ver. 0.9)">
+
+<style>body>pre{display:none;}</style>
+<script>var book = {
+  isStatic: true,
+  title:  'CM-Book',
+  banner: 'CM-Book',
+  root:   '',
+  pages:  'pages/',
+  pagePath: '', pageFile: '',
+};
+</script>
+<script src="CM/load.js?frame"></script>
+</head>
+
+<body>
+  <header>
+    <span></span>
+    <span id="banner"></span>
+    <span><a id="navToggle"></a></span>
+  </header>
+  <main>
+    <nav id="nav">
+      <menu></menu>
+      <footer></footer>
+    </nav>
+    <iframe id="article"></iframe>
+  </main>
+
+</body>
+</html>

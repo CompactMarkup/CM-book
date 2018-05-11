@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'CM Introduction', pages: 'pages/', pagePath: '', pageFile: 'index.html'}</script>
+<script src="../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
+@toc index;; CM Introduction
+
+= $CM and $CMB\s
+
+/$CM/ (*CM*) is a lightweight document markup language made for the purpose of writing interactive books. The books are rendered in a web browser and can be viewed either on-line (with their content hosted on a web server) or off-line (with the content stored in a set of local html files.)
+
+Individual pages, written in *CM* (the markup language) are organized (&quot;bound together&quot;) in a book-like hierarchy (chapters, sections, subsections) and processed by a supporting system. Both the book-like structure and the supporting systems are called *$CMB*. A $CMB has an automatically generated table of contents and its pages are inter-connected by a flexible system of hyperlinks.
+
+=== Interactive books
+
+In an /interactive book/, text is mixed with elements that are dynamic, animated, and responsive to users\' actions. The elements are realized by small programs with a graphical interface that makes the dynamic content: for example diagrams, graphs, animations, or dynamic text. The dynamic content can also include live synthesized audio. The small programs in $CMB\s are called *applets* (&quot;little applications&quot;).
+
+=== Online and offline books
+
+Each CM page of an online book is stored as a single file with a ~.cm~ name extension. The ~.cm~ files are in a hierarchy of folders that directly correspond to the organization of the book. A web server, through a small php script, wraps the content of a ~.cm~ file into an html envelope and serves it to a web browser. The CM content is processed /in the browser/ by several small JavaSCript programs and rendered as a web page.
+
+The fact that the CM markup is processed in the browser and not on the web server allows preprocessing of a $CMB and making it &quot;static&quot;, that is, readable without a web server. A script, run as a program from the command line, scans the entire $CMB structure, converts each ~.cm~ file into a corresponding ~.html~ file, compiles the table of content, and creates a main ~index.html~ file that is the book &quot;cover&quot;. The result can be then used offline, by opening the html files directly in a web browser.
+
+=== JavaScript
+
+Most of the supporting $CMB system is written in modern JavaScript ({:ES6|http://es6-features.org/}), that runs in the web browser. That allows $CM to easily integrate applets into web pages. JavaScript can be also used to extend the CM language in a given $CMB by new features, through so-called 'hooks'.
+
+=== Online books and php
+
+Online $CMB\s can do a little more than offline $CMB\s. The CM markup of online $CMB\s can be extended by php functions and pages of an online book can thus be connected to standard functions of a web site. $CMB requires PHP 7
+
+=== This $CMB
+
+This text about $CM and the $CMB system is itself (of course!) written in the form of a $CMB. This way all features of $CM can be directly demonstrated here and also tested.
+
+=== Your $CMB
+
+This $CMB can be also used as a starting point for writing one's own book. Simply make a copy and adapt it to your purposes.
+
+== A book-like organization of pages
+
+A book-like web site is a collection of pages in a hierarchy of folders. Think of the hierarchy as a book (the top-level folder) that consists of volumes (first level of subfolders), sections (second level), and chapters (third level). Each single page in a folder is contained in a single plain text file with an extension ~.cm~.
+
+Each folder /must/ contain a special file ~_index.cm~ (the leading ~_~ in the file name ensures that the file stands out among other page files). The ~_index.cm~ file contains the text of the first page in the current folder and also a table-of-contents (TOC) information (of this level) for the folder.
+
+A folder may contain, besides ~_index.cm~, other files with the ~.cm~ extension (other pages) and subfolders (subsections of the book) that, in turn, contain their own ~_index.cm~, and so on.
+
+== Online and offline book
+
+A CM book can be either &quot;online&quot; (on a web server) or &quot;offline&quot; (usable without a web server).
+
+In an online form, the pages of the book are accessed by a single ~index.php~ script. The script reads plain CM (~\*.cm~) files, wraps their content in an HTML envelope and serves them to the browser. The CM marked up text is processed by JavaScript in the browser.
+
+It is also possible to run a helper php script (~CM\/tools\/make_static.php~) in the root directory of the book; it compiles ~index.php~ into ~index.html~, replicates the hierarchy of pages and wraps the content of each ~\*.cm~ file into a corresponding ~\*.html~ file. Add (a copy or symbolic links) the CM system and other required resources (assets). The compiled book (created in the ~.static\/~ subdirectory) can be then either accessed locally without a web server, by opening the ~index.html~ file, or served by a web server without the need for PHP.
+
+== Known $CMB\s
+
+A short list of existing $CMB\s:
+
+* This CM documentation is itself written as a CM book and serves as a canonical CM book template with examples. The source code for this book is {gh:here|CompactMarkup/CM-Book} and the live version {:here|https://compactmarkup.github.io/CM-Book}.
+
+* {://mutebook.me}: online interactive textbook of music technology.
+
+== Issues &amp; Contact
+
+To suggest improvements, request new features, explanations etc., please log into $GH and create an {gh: issue|CompactMarkup/CM-Book/issues}.
+
+# eof
+
+</pre>
+</body>
+</html>

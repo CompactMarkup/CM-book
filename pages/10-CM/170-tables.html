@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'Tables', pages: 'pages/', pagePath: '10-CM/', pageFile: '170-tables.html'}</script>
+<script src="../../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
+@toc cm_tables;; Tables
+= Tables
+
+The support for tables is very basic: in a fenced section ~table~, ~[~ and ~]~, resp. ~(~ and ~)~ delimit table header cells resp. data cells:
+
+~~~
+--- div.left
+With borders:
+--- table.border
+[th1][th2][th3][th4]
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+---
+---
+
+--- div.right
+Borderless:
+--- table
+[th1][th2][th3][th4]
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+---
+---
+~~~
+makes {&gt;}
+---.box
+--- div.left
+With borders:
+--- table.border
+[th1][th2][th3][th4]
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+---
+---
+
+--- div.right
+Borderless:
+--- table
+[th1][th2][th3][th4]
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+(td1)(td2)(td3)(td4)
+---
+---
+---
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'Notes', pages: 'pages/', pagePath: '10-CM/', pageFile: '190-notes.html'}</script>
+<script src="../../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
+@toc cm_notes;; Notes
+= Notes
+
+CM text may contain three kinds of notes:
+- footnotes
+- editorial notes
+- 'to-do' placeholders
+
+Footnotes are as usual:
+~~~
+This text has an attached footnote.{fn: This is a footnote.}
+~~~
+makes {&gt;}
+---.box
+This text has an attached footnote.{fn: This is a footnote.}
+---
+
+Editorial notes are visible only if the book is in the debug mode (the port number &gt;= 8000):
+~~~
+This is {ed:mizzpeled|korrekt this}.
+~~~
+makes {&gt;}
+---.box
+This is {ed:mizzpeled|korrekt this}.
+---
+
+'To do' placeholders are also visible only in the debug mode:
+~~~
+This feature{todo: does not yet exist}.
+~~~
+makes {&gt;}
+---.box
+This feature{todo: does not yet exist}.
+---
+
+# eof
+</pre>
+</body>
+</html>

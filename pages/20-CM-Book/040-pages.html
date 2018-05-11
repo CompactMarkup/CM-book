@@ -1,3 +1,24 @@
+<!DOCTYPE html><html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<style>body>pre{display:none;}</style>
+<script>var book = { isStatic: true, title: 'Folders and pages', pages: 'pages/', pagePath: '20-CM-Book/', pageFile: '040-pages.html'}</script>
+<script src="../../CM/load.js"></script>
+
+</head>
+
+<body><pre>
+@chr macro $
+@chr b  *
+@chr em /
+@chr code ~
+@chr squo '
+@chr dquo &quot;
+
+@def CM Compact Markup
+@def CMB CM-Book
+@def GH GitHub
 @toc cmb_pages;; Folders and pages
 = Folders and pages
 
@@ -9,7 +30,7 @@ Each folder then contains one ~\*.cm~ file for every additional page in the sect
 
 ==== Numbered folder and file names
 
-Only those folders and ~.cm~ files (other than ~_index.cm~) whose names begin with numbers are included among the pages of the book. The "numbered" folders and files are lexicographically sorted.
+Only those folders and ~.cm~ files (other than ~_index.cm~) whose names begin with numbers are included among the pages of the book. The &quot;numbered&quot; folders and files are lexicographically sorted.
 
 ==== Prolog
 
@@ -31,3 +52,6 @@ A toc entry starts with ~@toc~ (in first position) that is followed by three par
 The page identifiers must be unique in the whole book. They are used to refer symbolically to the corresponding page, for example, in hypertext links. The use of page identifiers, rather than file names, makes it easier to move pages within the book without breaking the links.
 
 # eof
+</pre>
+</body>
+</html>
